@@ -8,4 +8,6 @@
     <string name="start_timer">start timer for that task</string>
     <string name="task_icon">task icon</string>
     <string name="clock">clock</string>
+    <string name="go_to_current_task_timer">go to current task timer</string>
+    <string name="ellipse_icon">ellipse icon</string>
 </resources>

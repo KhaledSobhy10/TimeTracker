@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(activityMainBinding.getRoot());
 
+        ArrayList<Task> tasks = fakeTasks();
 
+        activityMainBinding.currentTaskDetailsTv.setText(tasks.get(0).getTaskDetail());
+        activityMainBinding.currentTaskTimeTv.setText(tasks.get(0).getTaskTime() + ":20:00");
 
         activityMainBinding.tasksRv.setLayoutManager(new LinearLayoutManager(this));
-        TasksRecyclerViewAdapter tasksRecyclerViewAdapter = new TasksRecyclerViewAdapter(fakeTasks());
+        TasksRecyclerViewAdapter tasksRecyclerViewAdapter = new TasksRecyclerViewAdapter(tasks);
         activityMainBinding.tasksRv.setAdapter(tasksRecyclerViewAdapter);
 
     }
